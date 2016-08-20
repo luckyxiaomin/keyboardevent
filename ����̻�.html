@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>yanhua1</title>
+<script src="js/sportFrame.js"></script>
+<script>
+window.onload=function()
+{
+	var aDiv=document.getElementsByTagName('div');
+	document.onkeydown=function(ev)
+	{
+		var oEvent=ev||event;
+		if(oEvent.keyCode==32){
+		for(var i=0;i<aDiv.length;i++)
+		{
+		sport(aDiv[i],{top:100},function()
+		{
+		for(var j=0;j<aDiv.length;j++)
+		{
+		   sport(aDiv[j],{left:Math.random()*1600,top:Math.random()*600,opacity:40});
+		aDiv[j].style.background='#'+Math.ceil(Math.random()*16777215).toString(16);	 
+			
+		}	
+		});	
+		}
+		}
+	};
+};
+</script>
+<style>
+div{
+	width:20px;
+	height:50px;
+	border-radius:5px;
+	background:#CF0;
+	position:absolute;
+	top:600px;
+	left:50%;
+	}
+</style>
+</head>
+
+
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>
